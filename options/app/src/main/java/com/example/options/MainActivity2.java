@@ -12,7 +12,6 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        setTitle("First Activity");
         Button b1 = findViewById(R.id.button1);
 
         b1.setOnClickListener(new View.OnClickListener() {

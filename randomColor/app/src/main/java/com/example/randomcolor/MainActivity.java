@@ -19,12 +19,12 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ConstraintLayout layout = findViewById(R.id.main);
+                ConstraintLayout c = findViewById(R.id.main);
                 Random gen = new Random();
                 int red = gen.nextInt(256);
                 int green = gen.nextInt(256);
                 int blue = gen.nextInt(256);
-                layout.setBackgroundColor(Color.rgb(red, green, blue));
+                c.setBackgroundColor(Color.rgb(red, green, blue));
             }
         });
     }

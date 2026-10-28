@@ -33,8 +33,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode == 1 && resultCode == RESULT_OK){
-            Bundle extra = data.getExtras();
-            Bitmap image = (Bitmap) extra.get("data");
+            Bitmap image = (Bitmap) data.getExtras().get("data");
             BitmapDrawable drawable = new BitmapDrawable(image);
             ConstraintLayout c1 = findViewById(R.id.main);
             c1.setBackground(drawable);

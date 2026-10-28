@@ -44,8 +44,7 @@ public class MainActivity extends AppCompatActivity {
                     result.append(" Coke rs : 400");
                 }
                 result.append(" Total: ₹ "+total);
-                Toast.makeText(MainActivity.this, result.toString(), Toast.LENGTH_LONG).show();
-            }
+                Toast.makeText(MainActivity.this, result.toString(),Toast.LENGTH_LONG).show();            }
         });
     }
 }

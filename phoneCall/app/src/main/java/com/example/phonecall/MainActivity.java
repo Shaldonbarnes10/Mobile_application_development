@@ -13,26 +13,19 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
     EditText e;
     Button b;
-    private static final int CALL_PERMISSION_CODE=100;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
         e = findViewById(R.id.e1);
         b = findViewById(R.id.b1);
+
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Intent.ACTION_CALL);
                 i.setData(Uri.parse("tel:"+ e.getText().toString()));
-
-                try{
-                    startActivity(i);
-                } catch (Exception e) {
-                    Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();;
-                }
+                startActivity(i);
             }
         });
     }
